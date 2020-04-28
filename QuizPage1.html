@@ -10,37 +10,92 @@
   
   <!-- Questions -->
   <main>
-    <div id="question"></div>
+    <div id="question">QUIZ</div>
+    
   
   </main>
   
   <!-- JavaScript Styling --> 
   <script>
     //array of quiz questions
-    let quiz = [
+    const quiz = [
       {
-        question: "What is Javascript?",
-        answerA: "difficult",
-        answerB: "hard",
-        answerC: "impossible",
-        answerD: "mind blowing",
+        question: "What is JavaScript used for?",
+        answerA: "To create responsive and interactive elements for webpages",
+        answerB: "To visually style the page, including: colors, layouts and fonts",
+        answerC: "To create pages that are dispalyed on the World Wide Web",
+        answerD: "To define the content of web pages",
+        correct: "A"
+      },
+       {
+        question: "Where do the tags for JavaScript get inserted?",
+        answerA: "<head>",
+        answerB: "<body>",
+        answerC: "<footer>",
+        answerD: "the <head> and the <body> sections",
+        correct: "D"
       },
       {
-        question: "What is Javascript?",
-        answerA: "difficult",
-        answerB: "hard",
-        answerC: "impossible",
-        answerD: "mind blowing",
+        question: "What HTML element is used for JavaScript?",
+        answerA: "<javascript>",
+        answerB: "<js>",
+        answerC: "<script>",
+        answerD: "<scripting>",
+        correct: "C"
       },
       {
-        question: "What is Javascript?",
-        answerA: "difficult",
-        answerB: "hard",
-        answerC: "impossible",
-        answerD: "mind blowing",
+        question: "Of the options below, which is the correct way to format a 'for loop'?",
+        answerA: "for (i = 0; i < 100; i++)",
+        answerB: "for (i<=15; i++)",
+        answerC: "for (i++; i = 0; i < 100)",
+        answerD: "for (i < 100; i++; i = 0)",
+        correct: "A"
+      },
+      {
+        question: "How are comments added in a JavaScript?",
+        answerA: "${Commnet}",
+        answerB: "//Comment//",
+        answerC: "<==Comment ==>",
+        answerD: "!= Comment !==",
+        correct: "B"
+      },
+      {
+        question: "Arrays are a....",
+        answerA: "Collection of commands",
+        answerB: "Collection of data",
+        answerC: "Collection of HTML tags",
+        answerD: "Collection of images",
+        correct: "B"
+      },
+      {
+        question: "Math.round() will provide:",
+        answerA: "the value of a number rounded to the nearest integer",
+        answerB: "an index of numbers",
+        answerC: "the same value as Math.ciel",
+        answerD: "an array of numbers",
+        correct: "A"
+      },
+      {
+        question: "What are the 6 correct primitive data types of JavaScript",
+        answerA: "boolean, null, undefined, object, array, string",
+        answerB: "boolean, object, variables, array, string, symbol",
+        answerC: "boolean, null, undefined, number, string, symbol",
+        answerD: "null, undefined, number, array, string, symbol ",
+        correct: "C"
+      },
+      {
+        question: "A JavaScript variable is written:",
+        answerA: "v personName",
+        answerB: "var personname",
+        answerC: "variable personname",
+        answerD: "var personName",
+        correct: "D"
       },
     ]
-  </script>
+  
 
+  
+  </script>
+<script src="score.js"></script>
 </body>
 </html>

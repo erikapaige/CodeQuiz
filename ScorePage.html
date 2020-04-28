@@ -3,13 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="jssheet" href="./score.js">
   <link rel="stylesheet" href="./Assets/style.css">
   <title>Score</title>
 </head>
 <body>
   <!-- score -->
-  <!-- need an input and label (input to type into and label for directions), reference D5, client storage side -->
-  <!-- Button to submit results -->
 
+  <form>
+    <!-- label and input for quzzier to enter name and score -->
+    <p>
+      <label for="name">Name: </label>
+      <input type="name" name="name" id="name">
+    </p>
+    <p>
+      <button id="submit">Submit Your Score</button>
+    </p>
+  </form>
+    <!-- button to submit name and score -->
+    <!-- <p>
+      <a href="./highscores.html"><button>Submit Your Score</button></a>
+    </p> -->
+
+
+  <!-- Javascript info -->
+  <script>
+    document.getElementById('name').addEventListener('click', (event) =>{
+      event.preventDefault()
+      document.getElementById('name').value=''
+    })
+  
+    document.getElementById('submit').addEventListener('click', (event) =>{
+      event.preventDefault()
+      onclick="document.getElementById('submit').href='highscores.html'"
+    })
+  </script>
+
+<script src="score.js"></script>
 </body>
 </html>
