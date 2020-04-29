@@ -12,7 +12,7 @@ const progress = document.getElementById("progress")
 const scoreDiv = document.getElementById("scoreContainer")
 
 //array of quiz questions
-  const quiz = [
+  const quizArray = [
     {
       question: "What is JavaScript used for?",
       answerA: "To create responsive and interactive elements for webpages",
@@ -55,10 +55,99 @@ const scoreDiv = document.getElementById("scoreContainer")
     }
     ]
 
-//
+// making variables
+const lastQuestion = quizArray.length -1
+let runningQuestion = 0
+let count = 0
+const questionTime= 10
+const gageWidth = 150
+const gageUnit = gageWidth / questionTime
+let TIMER
+let score = 0
 
-//turn the array in to buttons
-function arrayButtons() {
-  
+//buidling the question and answer section
+function askQuestion(){
+  //q references quiz array
+  let q = questions[runningQuestion]
+
+  question.innerHTML = "<p>"+ q.question + "</p>"
+  answerA.innerHTML = q.answerA
+  answerB.innerHTML = q.answerB
+  answerC.innerHTML = q.answerC
+  answerD.innerHTML = q.answerD
 }
-//check if each answer is correct (true vs false)
+
+start.addEventListener("click", startQuiz){
+  console.log('start')
+}
+
+//buidling startQuiz function
+function startQuiz(){
+  //hiding the quiz question
+  start.style.display="none"
+  //showing the quiz question
+  askQuestion()
+  quiz.style.display ="block"
+  //buidling out timer
+  showProgress()
+  showCounter()
+  TIMER = setInterval(showCounter, 1000)
+}
+
+//building a for loop to cycle through array
+  for(let qIndex = 0; qIndex <= quiz.length; qIndex++){
+    progress.innerHTML += "<div class='progress' id="+ qIndex +"></div>"
+  }
+
+//buidling timer
+function showCounter(){
+  if(count <= questionTime){
+    counter.innerHTML = count
+    timeGage.style.width = count * gageUnit + "px"
+    count++ 
+  }else{
+    count = 0
+    if (runningQuestion < lastQuestion){
+      runningQuestion++
+      askQuestion()
+    }else{
+      clearInterval(TIMER);
+      showScore();
+    }
+  }
+}
+
+//check if each answer is correct
+function checkAnswer(answer){
+  if (answer === questions[runningQuestion].correct){
+    score++
+    answerIsCorrect()
+  }else{
+    answerIsWrong()
+  }
+  count = 0
+  if(runningQuestion < lastQuestion){
+    runningQuestion++
+    askQuestion()
+  }else{
+    clearInterval(TIMER)
+    showScore()
+  }
+}
+
+// answer is right
+function answerIsCorrect(){
+  document.getElementById(runningQuestion).style.backgroundColor = "#0f0"
+}
+
+// answer is wrong
+function answerIsWrong(){
+  alert("Incorrect Answer")
+  document.getElementById(runningQuestion).style.backgroundColor = "#f00"
+}
+
+// showing the score
+function showScore(){
+  scoreDiv.style.display="block";
+
+}

@@ -69,6 +69,18 @@ body.wrong {
 #start-btn {
   padding-bottom: 10px;
   margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: bolder;
+  word-break: break-all;
+  width: 100px;
+  height: 150px;
+  border: 2px solid lightgrey;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  left: 300px;
+  top: 50px;
+  color: lightgrey;
 }
 
 .col-md-6 {
