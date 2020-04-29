@@ -3,99 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./Assets/style.css">
   <title>Quiz</title>
 </head>
 <body>
   
-  <!-- Questions -->
+
   <main>
-    <div id="question">QUIZ</div>
-    
-  
+    <!-- Quiz Questions and Answers -->
+    <div id="container">
+      <div id="question">QUESTION</div>
+      <button class=answerBtn id="answer1"></button>
+      <button class=answerBtn id="answer2"></button>
+      <button class=answerBtn id="answer3"></button>
+      <button class=answerBtn id="answer4"></button>
+      <div id="score"></div>
+    </div>
+
+    <!-- Quiz Timer -->
+    <div id="remainingTime">Remaining Time</div>
+    <div id="answer"></div>
+    <div id="timer"></div>
+
   </main>
   
-  <!-- JavaScript Styling --> 
-  <script>
-    //array of quiz questions
-    const quiz = [
-      {
-        question: "What is JavaScript used for?",
-        answerA: "To create responsive and interactive elements for webpages",
-        answerB: "To visually style the page, including: colors, layouts and fonts",
-        answerC: "To create pages that are dispalyed on the World Wide Web",
-        answerD: "To define the content of web pages",
-        correct: "A"
-      },
-       {
-        question: "Where do the tags for JavaScript get inserted?",
-        answerA: "<head>",
-        answerB: "<body>",
-        answerC: "<footer>",
-        answerD: "the <head> and the <body> sections",
-        correct: "D"
-      },
-      {
-        question: "What HTML element is used for JavaScript?",
-        answerA: "<javascript>",
-        answerB: "<js>",
-        answerC: "<script>",
-        answerD: "<scripting>",
-        correct: "C"
-      },
-      {
-        question: "Of the options below, which is the correct way to format a 'for loop'?",
-        answerA: "for (i = 0; i < 100; i++)",
-        answerB: "for (i<=15; i++)",
-        answerC: "for (i++; i = 0; i < 100)",
-        answerD: "for (i < 100; i++; i = 0)",
-        correct: "A"
-      },
-      {
-        question: "How are comments added in a JavaScript?",
-        answerA: "${Commnet}",
-        answerB: "//Comment//",
-        answerC: "<==Comment ==>",
-        answerD: "!= Comment !==",
-        correct: "B"
-      },
-      {
-        question: "Arrays are a....",
-        answerA: "Collection of commands",
-        answerB: "Collection of data",
-        answerC: "Collection of HTML tags",
-        answerD: "Collection of images",
-        correct: "B"
-      },
-      {
-        question: "Math.round() will provide:",
-        answerA: "the value of a number rounded to the nearest integer",
-        answerB: "an index of numbers",
-        answerC: "the same value as Math.ciel",
-        answerD: "an array of numbers",
-        correct: "A"
-      },
-      {
-        question: "What are the 6 correct primitive data types of JavaScript",
-        answerA: "boolean, null, undefined, object, array, string",
-        answerB: "boolean, object, variables, array, string, symbol",
-        answerC: "boolean, null, undefined, number, string, symbol",
-        answerD: "null, undefined, number, array, string, symbol ",
-        correct: "C"
-      },
-      {
-        question: "A JavaScript variable is written:",
-        answerA: "v personName",
-        answerB: "var personname",
-        answerC: "variable personname",
-        answerD: "var personName",
-        correct: "D"
-      },
-    ]
-  
 
-  
-  </script>
+<!-- JavaScript Tag --> 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="score.js"></script>
+
 </body>
 </html>
