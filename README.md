@@ -1,9 +1,3 @@
 # CodeQuiz
 
-HOME / START PAGE: Began by creating a index.html that will be used as the home / start page for the quiz
-
-QUIZ PAGE:
-
-SCORE PAGE: Will give the student the final score of the game. 
-
-HIGHSCHORE: Will show the highest scores and names of the students who won.
+This is an interactive timed quiz that will test your fundamental Javascript knoweldge. The test and time will begin once you hit the "start quiz" button. You will be given a score after completing the quiz. If you would like to gauge your progress against your peers, fill in the input and submit your score to the "scoreboard."

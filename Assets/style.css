@@ -38,7 +38,7 @@ body.wrong {
 }
 
 #timer{
-
+ align-items: right;
 }
 .btn-grid {
   display: grid;
