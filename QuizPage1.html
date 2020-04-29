@@ -6,28 +6,48 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./Assets/style.css">
+  <script rel="javascript" href="score.js"></script>
   <title>Quiz</title>
 </head>
 <body>
   
-
-  <main>
-    <!-- Quiz Questions and Answers -->
-    <div id="container">
-      <div id="question">QUESTION</div>
-      <button class=answerBtn id="answer1"></button>
-      <button class=answerBtn id="answer2"></button>
-      <button class=answerBtn id="answer3"></button>
-      <button class=answerBtn id="answer4"></button>
-      <div id="score"></div>
+  <div class="container text-center">
+    <!-- Start / Intro -->
+    <!-- Grid row -->
+    <div class="row d-flex justify-content-center">
+      <!-- Grid column -->
+      <div class="col-md-6">
+  
+        <h1>Code Quiz: Introduction to Java Script</h1>
+        <p>This is a timed quiz on JavaScript fundamentals that will track the highiest scores.</p>
+  
+        <!-- button that takes the user to first question on the quiz page -->
+        <a href="./index2.html"><button id="start-btn" type="button" class="btn btn-dark">Click to Start</button></a>
+      </div>
+      
     </div>
 
-    <!-- Quiz Timer -->
-    <div id="remainingTime">Remaining Time</div>
-    <div id="answer"></div>
-    <div id="timer"></div>
+    <!-- Quiz Questions and Answers -->
+    <div id="quiz" style="display: none">
+        <div id="question"></div>
+        <div id="answers"></div>
+          <div class="answer-btn" id="A" onclick="checkAnswer('A')"></div>
+          <div class="answer-btn" id="B" onclick="checkAnswer('B')"></div>
+          <div class="answer-btn" id="C" onclick="checkAnswer('C')"></div>
+          <div class="answer-btn" id="D" onclick="checkAnswer('D')"></div>
+        </div>
+      </div>
 
-  </main>
+      <!-- Quiz Timer -->
+      <div id="timer">
+        <div id="counter"></div>
+        <div id="btimeGage"></div>
+        <div id="timeGage"></div>
+      </div>
+      <div id="progress"></div>
+    </div>
+    <div id="scoreContainer" style="display:none"></div>
+  </div>
   
 
 <!-- JavaScript Tag --> 
