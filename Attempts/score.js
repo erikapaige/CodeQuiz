@@ -148,6 +148,21 @@ function answerIsWrong(){
 
 // showing the score
 function showScore(){
-  scoreDiv.style.display="block";
+  scoreDiv.style.display="block",
+}
 
+//Local Storage, but it isn't linking
+document.getElementById('submitScore').addEventListener('click', (event) => {
+  event.preventDefault()
+  let user = {
+    Score: document.getElementById('userScore').value,
+    Name: document.getElementById('name').value
+  }
+})
+if (localStorage.getItem('user')) {
+  let user = JSON.parse(localStorage.getItem('user'))
+  document.getElementById('user').innerHTML = `
+        <h2>Score: ${user.score}</h2>
+        <h2>Name: ${user.email}</h2>
+        `
 }

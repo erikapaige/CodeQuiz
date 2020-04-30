@@ -4,9 +4,9 @@ This is an interactive timed quiz that will test your fundamental Javascript kno
 
 DEAR GRADER,
 
-This was a challenge for me. I understand the basic priciples of Javascript, but really struggle implementing them.
+This was a challenge for me. I understand the basic priciples of Javascript, but really struggle implementing them. It pains me to turn it in like this, but I am in between spending hours going in circles or going back to review and practice other javascript activies from class. 
 
-My eventListener to start the Quiz is null. I have reviwed it several times and cannot find where the function is undefined. I created the footer, so you could see the other pages were built.
+Most of my eventListeners are Quiz null. I have reviewed it several times and cannot find where the function is undefined. I created the footer, so you could see the other pages were built.
 
 I think my code is somewhat working, but i cannot get the buttons to render on the page. 
 
